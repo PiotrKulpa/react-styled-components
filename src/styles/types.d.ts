@@ -3,5 +3,6 @@ export interface ThemeTypes {
     white: string;
     black: string;
     grey: string;
+    darkGrey: string;
   }
 }
