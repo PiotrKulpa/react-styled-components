@@ -1,9 +1,21 @@
-import React, {FC} from 'react'
+import React, { FC } from 'react';
+import { menuItems } from '../constants';
+import MenuItem from './MenuItem';
+import { MenuWrapper, MenuItemWrapper } from './styles';
+import { useMatch } from 'react-router-dom';
 
 const Menu: FC = () => {
-  return (
-    <div>Menu</div>
-  )
-}
+  const isHome = Boolean(useMatch('/'));
 
-export default Menu
+  return (
+    <MenuWrapper {...{ isHome }}>
+      {menuItems.map(({ name, url, icon }, index) => (
+        <MenuItemWrapper key={index} {...{ isHome }}>
+          <MenuItem {...{ name, url, icon }} />
+        </MenuItemWrapper>
+      ))}
+    </MenuWrapper>
+  );
+};
+
+export default Menu;
