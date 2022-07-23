@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { menuItems } from '../constants';
+import { FC } from 'react';
+import { menuItems } from '../../constants';
 import MenuItem from './MenuItem';
 import { MenuWrapper, MenuItemWrapper } from './styles';
 import { useMatch } from 'react-router-dom';
