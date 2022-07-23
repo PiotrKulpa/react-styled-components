@@ -2,8 +2,13 @@ import styled from 'styled-components';
 import { MenuWrapperProps, MenuItemWrapperProps } from './types';
 
 export const MenuWrapper = styled.ul<MenuWrapperProps>`
-  margin: 20px 0 0;
+  position: -webkit-sticky;
   position: sticky;
+  top: 0;
+  margin: 10px 0;
+  height: 50px;
+  width: 100%;
+  z-index: 1;
   display: flex;
   list-style-type: none;
   align-items: center;

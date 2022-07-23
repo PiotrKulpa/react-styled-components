@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import Slider from 'react-slick';
-import { SliderWrapper, SliderPattern } from './styles';
+import { SliderWrapper, SliderPattern, HomeWrapper } from './styles';
 import { sliderSettings, sliderElements } from '../../constants';
 
 const Home: FC = () => {
   return (
-    <div>
+    <HomeWrapper>
       <Slider {...sliderSettings}>
         {sliderElements.map(({ text, imgUrl }) => (
           <>
@@ -16,7 +16,7 @@ const Home: FC = () => {
           </>
         ))}
       </Slider>
-    </div>
+    </HomeWrapper>
   );
 };
 

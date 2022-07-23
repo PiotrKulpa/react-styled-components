@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { SliderWrapperProps } from './types';
 
+export const HomeWrapper = styled.div`
+  margin-top: -70px;
+`;
+
 export const SliderPattern = styled.div`
 position: absolute;
   height: 100vh;
