@@ -14,7 +14,7 @@ export const sliderSettings = {
   infinite: true,
   autoplay: true,
   speed: 500,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 8000,
   slidesToShow: 1,
   slidesToScroll: 1,
   pauseOnHover: false,

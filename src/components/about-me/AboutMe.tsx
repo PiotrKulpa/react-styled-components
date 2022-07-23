@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 const AboutMe: FC = () => {
   return (
-    <div>
+    <div style={{ width: '100px' }}>
       Cillum pariatur sit occaecat ex laboris cillum deserunt anim culpa sunt.
       Officia sit amet consectetur dolore veniam adipisicing non fugiat. Ea id
       voluptate ullamco ut nisi reprehenderit duis. Sunt deserunt tempor
