@@ -10,6 +10,7 @@ import Blog from './components/blog/Blog';
 import Contact from './components/contact/Contact';
 import Menu from './components/menu/Menu';
 import LayoutWrapper from './components/layout-wrapper/LayoutWrapper';
+import Footer from './components/footer/Footer';
 
 const App: FC = () => {
   const [isHome, setIsHome] = useState(false);
@@ -33,6 +34,7 @@ const App: FC = () => {
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
+          <Footer />
         </LayoutWrapper>
       </BrowserRouter>
     </ThemeProvider>
