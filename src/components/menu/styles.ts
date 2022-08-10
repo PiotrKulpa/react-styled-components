@@ -7,7 +7,6 @@ export const MenuWrapper = styled.ul<MenuWrapperProps>`
   top: 0;
   margin: 10px 0;
   height: 50px;
-  width: 100%;
   z-index: 1;
   display: flex;
   list-style-type: none;
