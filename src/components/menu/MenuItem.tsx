@@ -5,8 +5,6 @@ import { MenuItemsTypes } from '../../constants/types';
 import { useMatch } from 'react-router-dom';
 
 const MenuItem: FC<MenuItemsTypes> = ({ name, url, icon }) => {
-  const isHome = Boolean(useMatch('/'));
-
   return icon ? <MenuLogo /> : <Link to={url}>{name}</Link>;
 };
 

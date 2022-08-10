@@ -33,5 +33,43 @@ export const MenuItemWrapper = styled.li<MenuItemWrapperProps>`
   a {
     color: ${({isHome, theme}) => isHome ? theme.colors.white : theme.colors.black};
     text-decoration: none;
+
+    &:after {
+        padding-top: 5px;
+        content: " ";
+        display: block;
+        position: absolute;
+        text-align: center;
+        margin: 0;
+        height: 1px;
+        width: 100%;
+        transform: scaleX(0);
+        border-bottom: 1px solid;
+        transition: transform 0.5s;
+      }
+
+    &:hover {
+      &:after {
+        padding-top: 5px;
+        content: " ";
+        display: block;
+        position: absolute;
+        text-align: center;
+        margin: 0;
+        height: 1px;
+        width: 100%;
+        border-bottom: 1px solid;
+        transform: scaleX(1);
+        transition: transform 0.5s;
+      }
+    }
+
+   
   }
+`;
+
+export const MenuLogoIconWrapper = styled.div`
+  border: solid 1px;
+  border-radius: 50%;
+  padding: 15px;
 `;
