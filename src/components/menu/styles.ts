@@ -5,14 +5,17 @@ export const MenuWrapper = styled.ul<MenuWrapperProps>`
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  margin: 10px 0;
-  height: 50px;
+  margin: 0;
+  padding: 0;
+  height: 70px;
   z-index: 1;
   display: flex;
   list-style-type: none;
   align-items: center;
   justify-content: center;
   background-color: ${({isHome, theme}) => isHome ? 'transparent' : theme.colors.white};
+  /* TODO: fix types */
+  /* border: ${({isScrolled}) => isScrolled ? 'solid 1px' : 'solid 0'}; */
 `;
 
 export const MenuItemWrapper = styled.li<MenuItemWrapperProps>`
@@ -72,4 +75,16 @@ export const MenuLogoIconWrapper = styled.div`
   border: solid 1px;
   border-radius: 50%;
   padding: 15px;
+
+  a {
+    &:after {
+      display: none;
+    }
+
+    &:hover {
+      &:after {
+        display: none;
+    }
+    }
+  }
 `;

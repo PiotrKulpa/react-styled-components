@@ -1,5 +1,6 @@
 export interface MenuWrapperProps {
-  readonly isHome: boolean;
+  readonly isHome?: boolean;
+  readonly isTop?: boolean;
 }
 
 export interface MenuItemWrapperProps {
