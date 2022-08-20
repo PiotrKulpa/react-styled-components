@@ -9,6 +9,7 @@ import Work from './components/work/Work';
 import Blog from './components/blog/Blog';
 import Contact from './components/contact/Contact';
 import Menu from './components/menu/Menu';
+import MobileMenu from './components/menu/MobileMenu';
 import LayoutWrapper from './components/layout-wrapper/LayoutWrapper';
 import Footer from './components/footer/Footer';
 
@@ -18,6 +19,7 @@ const App: FC = () => {
       <BrowserRouter>
         <LayoutWrapper>
           <Menu />
+          <MobileMenu />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-me" element={<AboutMe />} />

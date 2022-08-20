@@ -90,3 +90,21 @@ export const MenuLogoIconWrapper = styled.div`
     }
   }
 `;
+
+export const MobileLinksWrapper = styled.div`
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    padding: 15px;
+    text-decoration: none;
+    color: ${({theme}) => theme.colors.white};
+  }
+`;
