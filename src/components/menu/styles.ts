@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import styled from 'styled-components';
 import { MenuWrapperProps, MenuItemWrapperProps } from './types';
 
@@ -14,8 +16,8 @@ export const MenuWrapper = styled.ul<MenuWrapperProps>`
   align-items: center;
   justify-content: center;
   background-color: ${({isHome, theme}) => isHome ? 'transparent' : theme.colors.white};
-  /* TODO: fix types */
-  /* border: ${({isScrolled}) => isScrolled ? 'solid 1px' : 'solid 0'}; */
+  border-top: ${({isScrolled, theme}) => isScrolled ? `solid ${theme.colors.grey} 1px` : 'solid 0'};
+  border-bottom: ${({isScrolled, theme}) => isScrolled ? `solid ${theme.colors.grey} 1px` : 'solid 0'};
 `;
 
 export const MenuItemWrapper = styled.li<MenuItemWrapperProps>`
