@@ -1,25 +1,29 @@
-import react, { FC, useContext } from 'react';
-import { menuItems } from '../../constants';
-import MenuItem from './MenuItem';
-import { MenuWrapper, MenuItemWrapper, MobileLinksWrapper } from './styles';
+import { FC, useState } from 'react';
+import { MobileMenuWrapper } from './styles';
 import { useMatch } from 'react-router-dom';
-import { MainContext } from '../../context';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHouse, faBars } from '@fortawesome/free-solid-svg-icons';
+import MobileMenuPopup from './MobileMenuPopup';
 
 const MobileMenu: FC = () => {
   const isHome = Boolean(useMatch('/'));
-  const { isScrolled } = useContext(MainContext);
+  const [isToggleOn, setIsToggleOn] = useState<boolean>(false);
 
-  console.log({ isScrolled });
-
-  // TODO: dodaj styl do wrappera position absolute, dodaj menu mobilne
+  console.log({ isToggleOn });
 
   return (
-    <MobileLinksWrapper>
-      {menuItems.map(({ name, url, icon }, index) => (
-        <Link to={url}>{name}</Link>
-      ))}
-    </MobileLinksWrapper>
+    <>
+      <MobileMenuWrapper {...{ isHome }}>
+        <FontAwesomeIcon fontSize={30} icon={faHouse} />
+        <FontAwesomeIcon
+          fontSize={30}
+          icon={faBars}
+          onClick={() => setIsToggleOn(!isToggleOn)}
+        />
+      </MobileMenuWrapper>
+      <MobileMenuPopup {...{ setIsToggleOn, isToggleOn }} />
+    </>
   );
 };
 

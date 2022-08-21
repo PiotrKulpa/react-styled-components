@@ -9,8 +9,6 @@ const Menu: FC = () => {
   const isHome = Boolean(useMatch('/'));
   const { isScrolled } = useContext(MainContext);
 
-  console.log({ isScrolled });
-
   return (
     <MenuWrapper {...{ isHome, isScrolled }}>
       {menuItems.map(({ name, url, icon }, index) => (

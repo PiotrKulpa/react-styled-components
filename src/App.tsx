@@ -9,6 +9,7 @@ import Work from './components/work/Work';
 import Blog from './components/blog/Blog';
 import Contact from './components/contact/Contact';
 import Menu from './components/menu/Menu';
+import MobileMenuPopup from './components/menu/MobileMenuPopup';
 import MobileMenu from './components/menu/MobileMenu';
 import LayoutWrapper from './components/layout-wrapper/LayoutWrapper';
 import Footer from './components/footer/Footer';
